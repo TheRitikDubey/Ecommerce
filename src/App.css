@@ -1,0 +1,64 @@
+.cart {
+  margin-left: 7rem;
+}
+.nav {
+  background-color: rgb(206, 173, 173);
+}
+.nav-item {
+  margin-left: 12px;
+}
+h2 {
+  text-align: center;
+  padding: 9px;
+}
+.category {
+  margin-top: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-bottom: 212px;
+}
+.sub-cat {
+  padding: 6px;
+  margin-left: 85px;
+  height: 5rem;
+}
+.kids-img {
+  height: 300px;
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid rgb(208, 198, 198);
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.kids-img:hover {
+  width: 100%;
+  height: 350px;
+  cursor: pointer;
+  box-shadow: 5px 7px rgb(148, 148, 148);
+}
+.kids-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.kids-text {
+  word-wrap: break-word;
+}
+.kids-div {
+  margin: auto;
+}
+.brand {
+  text-align: center;
+  text-decoration: solid;
+  font-weight: bolder;
+  font-style: oblique;
+}
+.buy-btn {
+  background-color: green;
+  color: whitesmoke;
+  width: 29%;
+  text-decoration: none;
+}
