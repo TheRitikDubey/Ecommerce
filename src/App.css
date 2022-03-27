@@ -62,3 +62,30 @@ h2 {
   width: 29%;
   text-decoration: none;
 }
+li{
+  list-style: none;
+}
+.product-desp {
+  margin-top: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-bottom: 212px;
+}
+.product-name{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.product-img{
+  height: 500px;
+  width: 100%;
+  padding: 0.6rem;
+  border: 0px solid rgb(208, 198, 198);
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.instock{
+  color: red;
+  
+}
