@@ -2,16 +2,10 @@ import React from "react";
 import Men from "./Men";
 import Users from "./Users";
 import Women from "./Women";
-import Store from "../Redux/Store";
+import Cart from "./Cart";
 import Kids from "./Kids";
-import Product from "./Product";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { render } from "@testing-library/react";
-import { toBeChecked } from "@testing-library/jest-dom/dist/matchers";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
 function Main() {
-  render();
   const toBeChecked = () => {
     console.log("checked");
   };
@@ -53,20 +47,23 @@ function Main() {
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled">Premium</a>
+                    <a class="nav-link disabled" href="#">
+                      Premium
+                    </a>
                   </li>
-
                   <li class="nav-item cart">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="26"
-                      fill="currentColor"
-                      class="bi bi-cart3"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                    </svg>
+                    <Link className="nav-link" to="/Cart">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="currentColor"
+                        class="bi bi-cart3"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                      </svg>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -87,6 +84,10 @@ function Main() {
           </Route>
           <Route path="/Kids">
             <Kids />
+          </Route>
+
+          <Route path="/Cart">
+            <Cart />
           </Route>
         </Switch>
       </div>
