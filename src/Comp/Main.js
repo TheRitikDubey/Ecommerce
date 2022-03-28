@@ -2,17 +2,19 @@ import React from "react";
 import Men from "./Men";
 import Users from "./Users";
 import Women from "./Women";
+import Store from "../Redux/Store";
 import Kids from "./Kids";
 import Product from "./Product";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { render } from "@testing-library/react";
 import { toBeChecked } from "@testing-library/jest-dom/dist/matchers";
-
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 function Main() {
-  render()
+  render();
   const toBeChecked = () => {
     console.log("checked");
-  }
+  };
   return (
     <Router>
       <div>
@@ -41,7 +43,7 @@ function Main() {
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link class="nav-link" to="/Women" onClick={toBeChecked()} >
+                    <Link class="nav-link" to="/Women" onClick={toBeChecked()}>
                       Women
                     </Link>
                   </li>
@@ -71,7 +73,7 @@ function Main() {
             </div>
           </nav>
         </div>
-        
+
         <Switch>
           <Route path="/Men">
             <Men />
@@ -79,18 +81,15 @@ function Main() {
           <Route path="/Users">
             <Users />
           </Route>
-          
+
           <Route path="/Women">
             <Women />
           </Route>
           <Route path="/Kids">
             <Kids />
           </Route>
-          
-          
         </Switch>
-        
-</div>
+      </div>
     </Router>
   );
 }

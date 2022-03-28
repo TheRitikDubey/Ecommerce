@@ -1,0 +1,11 @@
+
+            <div>
+              <button type="button" class="btn btn-primary">
+                Primary
+              </button>
+              <button type="button" class="btn btn-secondary">
+                Secondary
+              </button>
+            </div>
+            //for  temp image or  intitil  images
+            products.images[0].asset.url
